@@ -8,6 +8,7 @@ help_keys = ["--help", "-h", "help"]
 bullet_list_keys = ["bullet-list", "ST-1"]
 prepend_list_keys = ["prepend-list", "ST-2"]
 slugify_keys = ["slugify", "ST-3"]
+uid_keys = ["uid", "ST-4"]
 togglecase_keys = ["togglecase", "memecase", "spongebob", "mock", "ST-5"]
 
 
@@ -52,6 +53,18 @@ else :
 		# slugify ST-3
 		elif sys.argv[1] in slugify_keys :
 			import slugify
+		
+		# uid ST-4
+		elif sys.argv[1] in uid_keys :
+			from uid import *
+
+			try :
+				length = sys.argv[2]
+			except :
+				length = 8
+			
+			print(generateUID(length), end = '')
+			
 		
 		# togglecase ST-5
 		elif sys.argv[1] in togglecase_keys :

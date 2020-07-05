@@ -7,4 +7,5 @@ tests=$(ls tests/test_*)
 
 for test in $tests; do
 	$test
+	echo ""
 done
