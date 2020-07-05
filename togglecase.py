@@ -4,7 +4,7 @@ return_str = ""
 return_str_randomized = ""
 
 for line in sys.stdin :
-	line = line.strip() # removes additional newline char
+	line = line.strip("\n") # removes additional newline char
 	if len(line) > 0 :
 		return_str = line.lower() + "\n"
 
@@ -17,4 +17,5 @@ for line in sys.stdin :
 			else :
 				return_str_randomized += return_str[char]
 
-print(return_str_randomized)
+return_str_randomized = return_str_randomized.rstrip("\n")
+print(return_str_randomized, end = '')
