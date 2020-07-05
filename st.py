@@ -8,6 +8,7 @@ help_keys = ["--help", "-h", "help"]
 bullet_list_keys = ["bullet-list", "ST-1"]
 prepend_list_keys = ["prepend-list", "ST-2"]
 slugify_keys = ["slugify", "ST-3"]
+togglecase_keys = ["togglecase", "memecase", "spongebob", "mock", "ST-5"]
 
 
 version_info = """
@@ -51,3 +52,7 @@ else :
 		# slugify ST-3
 		elif sys.argv[1] in slugify_keys :
 			import slugify
+		
+		# togglecase ST-5
+		elif sys.argv[1] in togglecase_keys :
+			import togglecase
