@@ -10,6 +10,8 @@
 
 status=0
 
+echo "Testing: togglecase"
+
 # oneline
 oneline=$(cat tests/oneline.txt)
 afterOneline=$(python3 st.py togglecase < tests/oneline.txt)
