@@ -10,6 +10,7 @@ prepend_list_keys = ["prepend-list", "ST-2"]
 slugify_keys = ["slugify", "ST-3"]
 uid_keys = ["uid", "ST-4"]
 togglecase_keys = ["togglecase", "memecase", "spongebob", "mock", "ST-5"]
+reverse_keys = ["reverse", "backwards", "ST-6"]
 
 
 version_info = """
@@ -29,6 +30,12 @@ Usage: python3 st.py [story key or feature name]
 	prepend-list ST-2 - Prepend each line with a provided string
 
 	slugify ST-3 - Convert a string into a url slug
+
+	uid ST-4 [length_param] - Generate a unique id containing random letters and digits
+
+	togglecase ST-5 - Convert a string to to toggle casing
+
+	reverse ST-6 - Reverse a string
 
 """
 
@@ -69,3 +76,7 @@ else :
 		# togglecase ST-5
 		elif sys.argv[1] in togglecase_keys :
 			import togglecase
+		
+		# reverse ST-6
+		elif sys.argv[1] in reverse_keys :
+			import reverse
